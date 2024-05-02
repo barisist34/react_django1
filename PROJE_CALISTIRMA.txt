@@ -1,0 +1,2 @@
+
+240314-- react server çalıştırma: npm start , package.json olan klasörde çalıştırılmalı. http://localhost:3000/
