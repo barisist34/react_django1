@@ -25,9 +25,10 @@ class ReactView(APIView):
             serializer.save()
             return Response(serializer.data)
     def get(self,request):
+        # time.sleep(5)
         new_record= React.objects.create(employee=f"Worker-{str(randint(1,50))}",department=f"Department-{str(randint(1,50))}")
     #     for i in range(100):
-        output = [{"employee": output.employee, "department": output.department}
+        output = [{"id":output.id,"employee": output.employee, "department": output.department}
                 for output in React.objects.all()[::-1]
                 ]
     #         output = [{"employee": str(i) , "department": "döngü 100"}]
